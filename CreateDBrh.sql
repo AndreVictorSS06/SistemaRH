@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS "cargo" (
 );
 
 CREATE TABLE IF NOT EXISTS "funcionario" (
-	"id_funcionario" SERIAL PRIMARY KEY,
+	"id_funcionario" SERIAL PRIMARY KEY ,
 	"nome" VARCHAR(255) NOT NULL,
 	"cpf" VARCHAR(14) NOT NULL UNIQUE,
 	"data_nascimento" DATE NULL,

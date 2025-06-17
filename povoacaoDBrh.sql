@@ -11,64 +11,69 @@ INSERT INTO departamento(nome_departamento) VALUES
 ('Logística'),
 ('Qualidade');
 
+select * from departamento
+
+truncate departamento cascade;
+
+
 -- Inserindo dados na tabela Funcionário 
-INSERT INTO Funcionario (Nome, CPF, Data_Nascimento, Cargo, Salario, Id_Departamento)
+INSERT INTO funcionario (Nome, CPF, Data_Nascimento, id_cargo, Salario, Id_Departamento)
 VALUES 
-('Beatriz Mendes', '159.753.486-00', '1992-01-15', 'Analista de Marketing', 4700, 3),
-('Roberto Lima', '753.159.258-00', '1987-05-10', 'Coordenador de Projetos', 6800, 3),
-('Fernanda Costa', '852.456.789-00', '1998-08-22', 'Operadora de Telemarketing', 1500, 5),
-('Luiz Souza', '258.963.147-00', '1975-12-30', 'Diretor de Tecnologia', 12000, 1),
-('Paulo Henrique', '357.951.654-00', '1991-06-05', 'Analista Financeiro', 4800, 2),
-('Camila Rocha', '654.789.123-00', '1996-02-14', 'Desenvolvedor Frontend', 5200, 1),
-('Gabriel Almeida', '951.753.852-00', '1993-11-12', 'Especialista em Redes', 6000, 1),
-('Juliana Araújo', '123.456.987-00', '1989-04-18', 'Coordenadora de Avaliações', 5500, 10),
-('Renato Oliveira', '741.852.963-00', '1985-09-28', 'Engenheiro de Software', 8000, 1),
-('Daniela Freitas', '369.258.147-00', '1997-07-07', 'Analista de Dados', 5500, 1),
-('Carlos Andrade', '111.222.333-00', '1988-03-15', 'Analista de Logística', 4200, 9),
-('Mariana Lopes', '222.333.444-00', '1992-07-10', 'Coordenadora de Logística', 6200, 9),
-('Rafael Souza', '333.444.555-00', '1985-11-25', 'Analista de Compras', 4500, 6),
-('Juliana Ribeiro', '444.555.666-00', '1990-02-18', 'Gerente de Compras', 8000, 6),
-('Lucas Fernandes', '555.666.777-00', '1987-05-05', 'Consultor de Vendas', 4700, 4),
-('Ana Martins', '666.777.888-00', '1995-08-22', 'Supervisora de Vendas', 6200, 4),
-('Beatriz Almeida', '777.888.999-00', '1991-04-12', 'Especialista em Comunicação', 5000, 7),
-('Fernando Silva', '888.999.000-00', '1993-09-30', 'Coordenador de Comunicação', 7000, 7),
-('Joana Cruz', '111.222.333-11', '1989-01-10', 'Assistente de Logística', 3500, 9),
-('Fábio Neves', '222.333.444-22', '1990-06-21', 'Gerente de Logística', 7500, 9),
-('Paula Lima', '333.444.555-33', '1985-12-14', 'Supervisor de Estoque', 5000, 9),
-('Ricardo Tavares', '444.555.666-44', '1991-04-23', 'Assistente de Compras', 3400, 6),
-('Carla Mendes', '555.666.777-55', '1986-08-30', 'Analista de Compras', 6800, 6),
-('Jorge Almeida', '666.777.888-66', '1983-02-15', 'Supervisor de Compras', 5500, 6),
-('Camila Rodrigues', '777.888.999-77', '1994-09-10', 'Vendedor', 4000, 4),
-('Bruno Costa', '888.999.000-88', '1988-03-05', 'Supervisor de Vendas', 6200, 4),
-('Patrícia Nunes', '999.000.111-99', '1997-11-12', 'Gerente de Vendas', 8500, 4),
-('Sofia Andrade', '000.111.222-00', '1995-05-18', 'Analista de Comunicação', 4800, 7),
-('Henrique Souza', '111.222.333-01', '1989-07-22', 'Especialista em Redes Sociais', 5200, 7),
-('Laura Figueiredo', '222.333.444-02', '1992-12-03', 'Redatora Publicitária', 4500, 7),
-('Renata Moura', '123.456.789-10', '1987-08-15', 'Analista de Qualidade', 4500, 10),
-('Carlos Pinto', '123.456.789-11', '1985-06-20', 'Especialista em Controle de Qualidade', 5500, 10),
-('Ana Monteiro', '123.456.789-12', '1990-09-25', 'Coordenadora de Qualidade', 7000, 10),
-('Juliana Rocha', '123.456.789-13', '1995-03-30', 'Assistente de Qualidade', 3200, 10),
-('Fernando Santos', '123.456.789-14', '1992-11-12', 'Supervisor de Qualidade', 5000, 10),
-('João Barros', '987.654.321-10', '1985-05-20', 'Coordenador Financeiro', 7000,2),
-('Mariana Lopes', '987.654.321-11', '1990-04-15', 'Analista Financeiro', 4800, 2),
-('Pedro Almeida', '987.654.321-12', '1983-08-18', 'Gerente Financeiro', 9000, 2),
-('Sofia Farias', '987.654.321-13', '1996-02-10', 'Assistente Financeiro', 3200, 2),
-('Gabriel Lima', '987.654.321-14', '1991-01-05', 'Supervisor Financeiro', 5200, 2),
-('Isabela Nascimento', '456.789.123-10', '1992-10-05', 'Assistente de Atendimento', 3200, 5),
-('Thiago Silva', '456.789.123-11', '1989-03-25', 'Coordenador de Atendimento', 6500, 5),
-('Camila Andrade', '456.789.123-12', '1994-05-20', 'Supervisor de Atendimento', 5000, 5),
-('Lucas Pereira', '456.789.123-13', '1996-06-15', 'Especialista em Atendimento', 4200, 5),
-('Patrícia Souza', '456.789.123-14', '1998-12-01', 'Atendente', 2800, 5),
-('Eduardo Ferreira', '789.123.456-10', '1990-03-18', 'Analista de Marketing Digital', 4800, 3),
-('Beatriz Costa', '789.123.456-11', '1988-09-07', 'Especialista em Branding', 5200, 3),
-('Carlos Nogueira', '789.123.456-12', '1985-12-22', 'Gerente de Marketing', 8500, 3),
-('Fernanda Melo', '789.123.456-13', '1993-11-11', 'Assistente de Marketing', 3200, 3),
-('Rafael Lima', '789.123.456-14', '1992-08-14', 'Coordenador de Marketing', 6800, 3),
-('Patrícia Lopes', '321.654.987-10', '1989-12-25', 'Gerente Administrativo', 8000, 8),
-('Ricardo Souza', '321.654.987-11', '1991-06-30', 'Analista Administrativo', 4500, 8),
-('Larissa Oliveira', '321.654.987-12', '1995-07-20', 'Assistente Administrativo', 3000, 8),
-('Bruno Tavares', '321.654.987-13', '1993-04-18', 'Coordenador Administrativo', 6200, 8),
-('Amanda Santos', '321.654.987-14', '1987-01-15', 'Supervisor Administrativo', 5200, 8);
+('Beatriz Mendes', '159.753.486-00', '1992-01-15', 2, 4700, 3),
+('Roberto Lima', '753.159.258-00', '1987-05-10', 11, 6800, 3),
+('Fernanda Costa', '852.456.789-00', '1998-08-22', 50, 1500, 5),
+('Luiz Souza', '258.963.147-00', '1975-12-30', 51, 12000, 1),
+('Paulo Henrique', '357.951.654-00', '1991-06-05', 3, 4800, 2),
+('Camila Rocha', '654.789.123-00', '1996-02-14', 52, 5200, 1),
+('Gabriel Almeida', '951.753.852-00', '1993-11-12', 20, 6000, 1),
+('Juliana Araújo', '123.456.987-00', '1989-04-18', 12, 5500, 10),
+('Renato Oliveira', '741.852.963-00', '1985-09-28', 49, 8000, 1),
+('Daniela Freitas', '369.258.147-00', '1997-07-07', 4, 5500, 1),
+('Carlos Andrade', '111.222.333-00', '1988-03-15', 5, 4200, 9),
+('Mariana Lopes', '222.333.444-00', '1992-07-10', 13, 6200, 9),
+('Rafael Souza', '333.444.555-00', '1985-11-25', 6, 4500, 6),
+('Juliana Ribeiro', '444.555.666-00', '1990-02-18', 26, 8000, 6),
+('Lucas Fernandes', '555.666.777-00', '1987-05-05', 48, 4700, 4),
+('Ana Martins', '666.777.888-00', '1995-08-22', 32, 6200, 4),
+('Beatriz Almeida', '777.888.999-00', '1991-04-12', 21, 5000, 7),
+('Fernando Silva', '888.999.000-00', '1993-09-30', 14, 7000, 7),
+('Joana Cruz', '111.222.333-11', '1989-01-10', 39, 3500, 9),
+('Fábio Neves', '222.333.444-22', '1990-06-21', 27, 7500, 9),
+('Paula Lima', '333.444.555-33', '1985-12-14', 33, 5000, 9),
+('Ricardo Tavares', '444.555.666-44', '1991-04-23', 40, 3400, 6),
+('Carla Mendes', '555.666.777-55', '1986-08-30', 6, 6800, 6),
+('Jorge Almeida', '666.777.888-66', '1983-02-15', 34, 5500, 6),
+('Camila Rodrigues', '777.888.999-77', '1994-09-10', 46, 4000, 4),
+('Bruno Costa', '888.999.000-88', '1988-03-05', 32, 6200, 4),
+('Patrícia Nunes', '999.000.111-99', '1997-11-12', 28, 8500, 4),
+('Sofia Andrade', '000.111.222-00', '1995-05-18', 7, 4800, 7),
+('Henrique Souza', '111.222.333-01', '1989-07-22', 22, 5200, 7),
+('Laura Figueiredo', '222.333.444-02', '1992-12-03', 47, 4500, 7),
+('Renata Moura', '123.456.789-10', '1987-08-15', 8, 4500, 10),
+('Carlos Pinto', '123.456.789-11', '1985-06-20', 23, 5500, 10),
+('Ana Monteiro', '123.456.789-12', '1990-09-25', 15, 7000, 10),
+('Juliana Rocha', '123.456.789-13', '1995-03-30', 41, 3200, 10),
+('Fernando Santos', '123.456.789-14', '1992-11-12', 35, 5000, 10),
+('João Barros', '987.654.321-10', '1985-05-20', 16, 7000,2),
+('Mariana Lopes', '987.654.321-11', '1990-04-15', 3, 4800, 2),
+('Pedro Almeida', '987.654.321-12', '1983-08-18', 29, 9000, 2),
+('Sofia Farias', '987.654.321-13', '1996-02-10', 42, 3200, 2),
+('Gabriel Lima', '987.654.321-14', '1991-01-05', 36, 5200, 2),
+('Isabela Nascimento', '456.789.123-10', '1992-10-05', 43, 3200, 5),
+('Thiago Silva', '456.789.123-11', '1989-03-25', 17, 6500, 5),
+('Camila Andrade', '456.789.123-12', '1994-05-20', 37, 5000, 5),
+('Lucas Pereira', '456.789.123-13', '1996-06-15', 24, 4200, 5),
+('Patrícia Souza', '456.789.123-14', '1998-12-01', 53, 2800, 5),
+('Eduardo Ferreira', '789.123.456-10', '1990-03-18', 9, 4800, 3),
+('Beatriz Costa', '789.123.456-11', '1988-09-07', 25, 5200, 3),
+('Carlos Nogueira', '789.123.456-12', '1985-12-22', 30, 8500, 3),
+('Fernanda Melo', '789.123.456-13', '1993-11-11', 44, 3200, 3),
+('Rafael Lima', '789.123.456-14', '1992-08-14', 18, 6800, 3),
+('Patrícia Lopes', '321.654.987-10', '1989-12-25', 31, 8000, 8),
+('Ricardo Souza', '321.654.987-11', '1991-06-30', 10, 4500, 8),
+('Larissa Oliveira', '321.654.987-12', '1995-07-20', 45, 3000, 8),
+('Bruno Tavares', '321.654.987-13', '1993-04-18', 19, 6200, 8),
+('Amanda Santos', '321.654.987-14', '1987-01-15', 38, 5200, 8);
 
 -- Inserindo dados na tabela cargo
 INSERT INTO cargo (nome_cargo, salario_base)
@@ -226,7 +231,7 @@ INSERT INTO funcionario_projeto (id_funcionario, id_projeto, data_inicio) VALUES
 (14, 12, '2024-02-15'), 
 (15, 13, '2024-01-05');
 -- Inserindo dados na tabela funcionario_beneficio 
-INSERT INTO funcionario_beneficio (id_funcionario, id_beneficio, data_inicio, ) VALUES
+INSERT INTO funcionario_beneficio (id_funcionario, id_beneficio, data_inicio ) VALUES
 (1, 1, '2023-01-01'),
 (1, 2, '2023-01-01'),
 (2, 1, '2023-02-01'),
@@ -242,8 +247,6 @@ INSERT INTO funcionario_beneficio (id_funcionario, id_beneficio, data_inicio, ) 
 (10, 3, '2023-06-01'), 
 (11, 10, '2023-07-01'), 
 (12, 9, '2023-08-01');
-
-
 
 
 
