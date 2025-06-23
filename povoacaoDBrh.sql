@@ -11,11 +11,6 @@ INSERT INTO departamento(nome_departamento) VALUES
 ('Logística'),
 ('Qualidade');
 
-select * from departamento
-
-truncate departamento cascade;
-
-
 -- Inserindo dados na tabela Funcionário 
 INSERT INTO funcionario (Nome, CPF, Data_Nascimento, id_cargo, Salario, Id_Departamento)
 VALUES 
@@ -145,7 +140,7 @@ INSERT INTO beneficio (nome, valor) VALUES
 ('Programas de Desenvolvimento', 150);
 
 -- Inserindo dados na tabela projeto
-INSERT INTO projeto (nome, id_departamento) VALUES 
+INSERT INTO projeto(nome, id_departamento) VALUES 
 ('Automação de Processos', 1),
 ('Projeto de Redes Corporativas', 1),
 ('Monitoramento de Redes', 1),
@@ -179,7 +174,6 @@ INSERT INTO projeto (nome, id_departamento) VALUES
 
 -- Inserindo dados na tabela folha de pagamento
 INSERT INTO folha_de_pagamento (id_funcionario, mes_referencia, salario_bruto, salario_liquido, data_pagamento) VALUES
-(1, '2024-05-01', 4200, 3400, '2024-05-30'),
 (2, '2024-05-01', 6600, 5300, '2024-05-30'),
 (3, '2024-05-01', 5200, 4150, '2024-05-30'),
 (4, '2024-05-01', 9200, 7600, '2024-05-30'),
@@ -196,22 +190,22 @@ INSERT INTO folha_de_pagamento (id_funcionario, mes_referencia, salario_bruto, s
 (15, '2024-05-01', 8200, 6600, '2024-05-30');
 
 -- Inserindo dados na tabela ferias
-INSERT INTO ferias (data_inicio, data_fim, id_funcionario, status) VALUES
-('2024-07-01', '2024-07-30', 1, 'Aprovado'),
-('2024-08-01', '2024-08-30', 2, 'Aprovado'),
-('2024-09-01', '2024-09-30', 3, 'Pendente'),
-('2024-10-01', '2024-10-30', 4, 'Aprovado'),
-('2024-11-01', '2024-11-30', 5, 'Aprovado'),
-('2024-12-01', '2024-12-30', 6, 'Pendente'),
-('2024-07-15', '2024-08-15', 7, 'Aprovado'),
-('2024-08-15', '2024-09-15', 8, 'Aprovado'),
-('2024-09-15', '2024-10-15', 9, 'Pendente'),
-('2024-10-15', '2024-11-15', 10, 'Aprovado'),
-('2024-11-15', '2024-12-15', 11, 'Aprovado'),
-('2024-07-01', '2024-07-31', 12, 'Pendente'),
-('2024-08-01', '2024-08-31', 13, 'Aprovado'),
-('2024-09-01', '2024-09-30', 14, 'Aprovado'),
-('2024-10-01', '2024-10-31', 15, 'Pendente');
+INSERT INTO ferias (data_incio, data_fim, id_funcionario, status) VALUES
+('2024-07-01', '2024-07-30', 1, 'aprovada'),
+('2024-08-01', '2024-08-30', 2, 'aprovada'),
+('2024-09-01', '2024-09-30', 3, 'concluida'),
+('2024-10-01', '2024-10-30', 4, 'aprovada'),
+('2024-11-01', '2024-11-30', 5, 'aprovada'),
+('2024-12-01', '2024-12-30', 6, 'planejada'),
+('2024-07-15', '2024-08-15', 7, 'aprovada'),
+('2024-08-15', '2024-09-15', 8, 'aprovada'),
+('2024-09-15', '2024-10-15', 9, 'planejada'),
+('2024-10-15', '2024-11-15', 10, 'aprovada'),
+('2024-11-15', '2024-12-15', 11, 'aprovada'),
+('2024-07-01', '2024-07-31', 12, 'planejada'),
+('2024-08-01', '2024-08-31', 13, 'aprovada'),
+('2024-09-01', '2024-09-30', 14, 'aprovada'),
+('2024-10-01', '2024-10-31', 15, 'planejada');
 
 -- Inserindo dados na tabela funcionario_projeto
 INSERT INTO funcionario_projeto (id_funcionario, id_projeto, data_inicio) VALUES
@@ -230,6 +224,7 @@ INSERT INTO funcionario_projeto (id_funcionario, id_projeto, data_inicio) VALUES
 (13, 11, '2024-03-10'), 
 (14, 12, '2024-02-15'), 
 (15, 13, '2024-01-05');
+
 -- Inserindo dados na tabela funcionario_beneficio 
 INSERT INTO funcionario_beneficio (id_funcionario, id_beneficio, data_inicio ) VALUES
 (1, 1, '2023-01-01'),
