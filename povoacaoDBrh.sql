@@ -225,6 +225,10 @@ INSERT INTO funcionario_projeto (id_funcionario, id_projeto, data_inicio) VALUES
 (14, 12, '2024-02-15'), 
 (15, 13, '2024-01-05');
 
+INSERT INTO funcionario_projeto (id_funcionario, id_projeto, data_inicio) VALUES
+(1, 7, '2024-01-01'),
+(1, 10, '2024-01-01');
+
 -- Inserindo dados na tabela funcionario_beneficio 
 INSERT INTO funcionario_beneficio (id_funcionario, id_beneficio, data_inicio ) VALUES
 (1, 1, '2023-01-01'),
